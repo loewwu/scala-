@@ -1,0 +1,8 @@
+1.安装java环境、安装scala环境，选择合适的版本
+2.建议在intelljJ IDEA环境中调试
+3.使用java版本为1.8.0，scala版本为2.11.8
+4.步骤：
+① 安装java 
+② 安装scala
+③ 设置路径
+④ 设置CLASSPATH
