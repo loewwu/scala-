@@ -1,0 +1,21 @@
+1. 脚本是可以在命令行运行的由代码构成的文件，编写ScriptDemo.scala，开启scala学习之旅，类似于helloworld
+// print "hello scala."
+object ScriptDemo {
+  def main(args: Array[String]): Unit = {
+    println("hello scala.")
+  }
+}
+
+2. 变量命名：
+① 字母或下划线开头，后面跟字母、数字或下划线；
+② $用作内部用途，变量命名，不可使用；
+③ scala语言区分大小写字母，thisvalue ≠ thisValue
+
+3. 代码示例：
+val whole = 11
+val fractional = 1.4
+val words = "A value"
+
+println(whole, fractional, words)
+
+注：一旦初始化val，则不可修改，即常量或不可更改的变量
