@@ -19,3 +19,19 @@ val words = "A value"
 println(whole, fractional, words)
 
 注：一旦初始化val，则不可修改，即常量或不可更改的变量
+
+4. 建议：定义变量名称时，应该见名知意，以便减少注释
+
+5. println函数，接受单个值或者由逗号分割的值序列
+
+6. 练习之实现代码：
+object ScriptDemo {
+  def main(args: Array[String]): Unit = {
+    val newData = 17
+    val newStr = "ABC1234"
+    val newDouble = 11.2
+    val newTestData = newData*newDouble
+    println(newData, newStr,newTestData)
+  }
+}
+
