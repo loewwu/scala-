@@ -1,4 +1,8 @@
 1. 值定义为val，一旦定义无法更改，而变量var，则可以更改存储的值； 如： var name:String = "loewwu"
 变量描述的是可以修改的，而值描述的是不可修改的东西.
 
-2. 
+2. scala支持一次生成多个变量，如下：
+val xmax, ymax = 100  // xmax, ymax都声明为100
+
+如果方法返回值是元组，我们可以使用 val 来声明一个元组：
+val pa = (40,"Foo")，则返回的是 pa: (Int, String) = (40,Foo)
