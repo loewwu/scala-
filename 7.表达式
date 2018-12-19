@@ -1,0 +1,31 @@
+1. 代码中语句不会产生结果，它的执行的是产生结果之外的其他操作，语句可以改变状态；而表达式则倾向于表达，即运行产生结果；
+ex： val i=1; val j=2
+i+j 可以产生结果；
+
+例如：
+val c = {
+      val i =1
+      val j = 2*i
+      i/(j*0.5)
+    }
+    println("c = " + c)
+    
+2. 课后习题：
+    val feetPerMile = 5280
+    val yardsPerMile = feetPerMile/3.0
+    val xMiles = 2000/feetPerMile
+
+    val x = {
+      val feetPerMile = 5280
+      val yardsPerMile = feetPerMile/3.0
+      2000/feetPerMile
+    }
+    println(x)
+    
+   备注：
+   val x = println(5)
+   println(x)
+   
+   运行后会生成 5 ()
+   该类表达式不会产生值，则返回是一个Unit
+    
