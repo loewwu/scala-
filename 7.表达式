@@ -49,3 +49,45 @@ val result = {
 
     println(result)
     输出： it is true.
+    
+4.组合表达式
+将多个表达式，按照花式括号括起来，即是组合表达式，组合表达式可以包含任意数量的其他表达式，包括其他被花括号括起来的表达式。
+val hours = 6
+val activity = "swimming"
+
+val isOpen = {
+      if (activity=="swimming" || activity == "ice skating") {
+        val opens = 9
+        val closes = 20
+        println("operating hours: " + opens + "->" + closes)
+
+        if (hours >= opens && hours <= closes) {
+          true
+        } else {
+          false
+        }
+      } else {
+        false
+      }
+}
+println(isOpen)
+
+------------------ 0 - 7小节总结：
+1. 赋值、类型推断；
+2. 语句改变状态，表达式用于表达；也即表达式产生结果，而语句不会；语句不会改变周围的状态，所以语句必须改变周围的环境才能使其执行的操作有意义，
+scala中几乎一切都是表达式。
+3. 计算顺序：遵循其他优先级原则；
+4. 条件表达式：if ... else ...
+5. 组合表达式：组合表达式的值，就是其最后一个表达式的值；例如下面例子：
+val lbs = 150.0
+val height = 68.0
+val weightStatus = {
+      val bmi = lbs/(height*height) * 703.07
+      if (bmi <18.5)
+        "under weight"
+      else if (bmi<25)
+        "normal weight"
+      else
+        "over weight"
+      }
+println(weightStatus)
