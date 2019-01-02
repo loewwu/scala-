@@ -60,3 +60,6 @@ Exception in thread "main" java.lang.AssertionError: assertion failed: Exception
 	at TestPackage$.main(TestPackage.scala:12)
 	at TestPackage.main(TestPackage.scala)
   很清晰地知道，在str中，判断输出的值，并不是“I am loew”
+  
+ III. 可关注ScalaTest(www.scalatest.org),编写可测试代码的一个显而易见的好处是可以改变思考和设计代码的方式，保证正确的另一个层面思考方式是测试驱动；
+ 
