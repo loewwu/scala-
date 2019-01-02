@@ -1,0 +1,34 @@
+1. 域作为一个概念，具象到val和var来说，对于变量和常量，每个对象在定以后，都会有对应的域来获取自己的存储；示例如下：
+object TestDomain {
+
+  def main(args: Array[String]): Unit = {
+
+    val cup = new Cup
+    val rs = cup.add(50)
+    val res = cup.add(70)
+
+    assert(50 == rs, "Exception from assert," + "Got rs is " + rs)
+    assert(70 == res, "Exception from asset," + "Got res is " + res)  // 运行到这行时，percentFull值已为100
+  }
+
+  class Cup {
+    var percentFull = 0
+    val max = 100
+
+    def add(increase:Int):Int = {
+      percentFull += increase  // 等价于 percentFull = percentFull + increase
+
+      if(percentFull>max) {
+        percentFull = max
+      }
+      percentFull
+    }
+  }
+}
+--执行结果：
+Exception in thread "main" java.lang.AssertionError: assertion failed: Exception from asset,Got res is 100
+	at scala.Predef$.assert(Predef.scala:170)
+	at TestDomain$.main(TestDomain.scala:10)
+	at TestDomain.main(TestDomain.scala)
+  
+  结论：可以看出percentFull与add都在类的内部，作用域是一样的，当运行完rs值时，percentFull已经等于50了，调用第二次时，percentFull值已等于120.
