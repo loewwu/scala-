@@ -1,1 +1,38 @@
+域：类中变量与函数的作用域
 
+例子如下：
+object TestDomain {
+
+  class Cup {
+    var percentFull = 0
+  }
+
+  class Cup2 {
+    var percentFull = 0
+    val max = 100
+
+    def add(increase:Int):Int = {
+      percentFull += increase
+      if(percentFull > max) {
+        percentFull = max
+      }
+      percentFull
+    }
+  }
+
+
+  def main(args: Array[String]): Unit = {
+
+    val c1 = new Cup
+    c1.percentFull = 50
+
+    // println(c1.percentFull)
+
+    val c2 = new Cup2
+    val c3 = c2.add(50)
+    val c4 = c2.add(100)
+
+    println(s"c3 = $c3" + s", c4 = $c4")
+  }
+
+}
