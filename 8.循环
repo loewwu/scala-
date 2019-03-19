@@ -101,3 +101,21 @@ def main(args: Array[String]) {
       }
     } // 外循环
   }
+
+
+例子3 ：编写一个for循环，输出0-10中偶数与奇数的和
+def main(args: Array[String]): Unit = {
+    var evens = 0
+    var odds = 0
+
+    for (i <- Range(1,11)) {
+      if(i % 2 == 0)
+        evens += i
+      else
+        odds += i
+    }
+
+    val all = evens + odds
+
+    println(s"evens= $evens, odds= $odds, all= $all")
+  }
